@@ -1,38 +1,87 @@
-.App {
+
+#top-of-page-heading {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.movie-title-list:hover {
+  color: aliceblue;
+  
   }
+
+.book-title-list:hover {
+  color: aliceblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #book-container {
+    background-color: lightblue;
+    display: flex;
+    width: 33%
   }
-  to {
-    transform: rotate(360deg);
+
+  #movie-container {
+    background-color: darkcyan;
+    display: flex;
+    width: 33%;
   }
-}
+
+  #list-container {
+    display: flex;
+  }
+
+  #center-container {
+    background-color: aliceblue;
+    display: flex; 
+    width: 34%;
+    align-items: center;
+    justify-content: space-around;
+    
+   
+  }
+
+  .image-in-center-container {
+    display: flex; 
+    width: 100%;
+  }
+
+  .selected-media-information-container {
+    display: flex;
+  }
+
+  .selected-media-one {
+    display: flex;
+    width: 33%
+  }
+
+  .selected-media-two {
+    display: flex; 
+    width: 34%;
+    justify-content: center;
+    align-content: flex-start;
+    
+  }
+
+  .selected-media-three {
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #delete-button {
+  border: 10%;
+  border-style: solid;
+  border-color: darkcyan;
+    
+  }
+
+  #selected-media-title {
+    text-align: center;
+  }
+
+ 
+
+
+
+
+
+
