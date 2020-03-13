@@ -8,7 +8,11 @@ export default function BookIndex(props) {
    const {books}= props
 
    const listTheBooks= () => {
-       return books.map(the_book => {
+
+    let theBooksAlphabetized= books.sort((a, b) => {
+        return a.title.localeCompare(b.title)
+    })
+       return theBooksAlphabetized.map(the_book => {
            return <Book book={the_book} mediaExpand={props.mediaExpand}/>
        })
    }

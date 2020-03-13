@@ -16,7 +16,6 @@ export default class App extends React.Component{
     movies: [],
     selectedMedia: [],
     search: []
-    
   }
 
   componentDidMount= () => {
@@ -51,7 +50,6 @@ export default class App extends React.Component{
       selectedMedia: this.state.selectedMedia
     })
   }
-
   }
 
   emptySelectedMedia= () => {
@@ -61,8 +59,6 @@ export default class App extends React.Component{
   }
 
   newBookFormSubmit= (book) => {
-    console.log(book)
-
     const bookTitle= book.title
     const bookUrl= book.url
     const bookAuthor= book.author
@@ -86,7 +82,6 @@ export default class App extends React.Component{
         books: [...this.state.books, newBook]
       })
     })
-    
   }
 
   newMovieFormSubmit= (movie) => {
@@ -174,10 +169,14 @@ export default class App extends React.Component{
       return bookTitles + bookAuthors
     })
   
-    const filteredSearchArray= [...filteredMovies, ...filteredBooks]
+    let filteredSearchArray= [...filteredMovies, ...filteredBooks]
+
+    let alphabetizedSearchResults= filteredSearchArray.sort((a, b) => {
+      return a.title.localeCompare(b.title)
+    })
 
     this.setState({
-          search: filteredSearchArray
+          search: alphabetizedSearchResults
       })
 }
 

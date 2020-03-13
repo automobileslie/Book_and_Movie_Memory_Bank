@@ -5,7 +5,11 @@ import Movie from './Movie';
 
 export default function MovieIndex(props) {
     const listTheMovies= () => {
-        return props.movies.map(the_movie => {
+
+        let theMoviesAlphabetized= props.movies.sort((a, b) => {
+            return a.title.localeCompare(b.title)
+        })
+        return theMoviesAlphabetized.map(the_movie => {
             return <Movie movie={the_movie} mediaExpand={props.mediaExpand}/>
         })
     }
