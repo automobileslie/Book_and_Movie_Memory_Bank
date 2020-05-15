@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css'
-import { render } from '@testing-library/react';
 import Movie from './Movie';
 
 export default function MovieIndex(props) {
